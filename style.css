@@ -10,28 +10,39 @@
 
 .header {
     background-color: black;
-    height: 90px;
+    /*height: 90px;*/
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    flex: 1;
+    text-align: center;
+}
+
+.header-right {
+    flex: 1;
+
 }
 
 .circle {
-    float: left;
-    margin-left: 200px;
+    /*margin-left: 150px;*/
     margin-top: 20px;
-    color: rgb(153, 233, 73);
+    color: lightblue;
 }
 
-.dots {
-    margin-left: 20px;
-}
+/*.dots {
+    margin-left: 30px
+}*/
 
 .header h4 {
     margin-top: 5px;
+    font-size: larger;
 }
 
 .header-images {
     float: right;
-    margin-right: 20px;
-    margin-top: 30px;
+    margin-right: 40px;
 }
 
 .container2 {
@@ -40,9 +51,8 @@
 }
 
 nav {
-    background-color: grey;
+    background-color: lightblue;
     text-align: center;
-    color: white;
 }
 
 #margin {
@@ -53,7 +63,7 @@ nav {
 nav.div {
     background-color: black;
     color: white;
-    height: 45px;
+    /*height: 45px;*/
     text-align: left;
 }
 
@@ -63,10 +73,14 @@ nav.div {
 
 .container3 {
     display: flex;
+    background-image: url(B1.jpg);
+    background-size: 100% 100%;
 }
 
 .main-left {
     flex: 1;
+    margin-left: 20px;
+    color: white;
 }
 
 .main-right {
@@ -74,8 +88,7 @@ nav.div {
 }
 
 .main-text {
-    height: 220px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid lightblue;
 }
 
 .main-image {
@@ -83,13 +96,42 @@ nav.div {
     margin-right: 20px;
 }
 
+.main-image-right {
+    float: right;
+    margin-left: 20px;
+}
+
 .main-text a {
     float: right;
     background-color: black;
-    color: chartreuse;
+    color: lightblue;
     text-align: center;
-    padding: 10px 10px;
+    padding: 10px;
     text-decoration: none;
+    margin-right: 50px;
+}
+
+.mainp {
+    margin-bottom: 60px;
+}
+
+.mainp-other {
+    margin-bottom: 60px;
+}
+
+.main-footer {
+    margin-top: 10px;
+    margin-bottom: 45px;
+    margin-left: 50px;
+}
+
+.main-footer h1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.main-footer p {
+    margin-top: 0px;
 }
 
 .sidebox {
@@ -97,17 +139,19 @@ nav.div {
     flex: 1;
     display: block;
     width: 200px;
-    height: 320px;
+    height: 350px;
     margin: 10px;
     border: 1px solid black;
     border-radius: 10px;
     margin: 20px;
-    background-color: rgb(219, 253, 253);
+    background-color: lightblue;
 }
 
 .sidebox h4 {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 .side-c1 {
@@ -117,6 +161,7 @@ nav.div {
 
 .side-links {
     display: block;
+    color: black;
 }
 
 .side-c2 {
@@ -131,21 +176,25 @@ nav.div {
     margin-bottom: 7px;
 }
 
+.side-c2 p:hover {
+    font-size: 150%;
+    font-weight: bold;
+}
 
 #searchbox {
+    margin-top: 15px;
     border-radius: 50px;
 }
 
-.container6 {
+.container4 {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .footer {
-    margin-top: 20px;
     background-color: lightblue;
-    height: 170px;
+    /*height: 170px;*/
 }
 
 .footer-links {
@@ -153,8 +202,10 @@ nav.div {
     margin: 20px;
 }
 
-div .footer-links a {
+.footer-links a {
     display: block;
+    text-decoration: none;
+    color: black;
 }
 
 a:hover {
@@ -162,19 +213,19 @@ a:hover {
 }
 
 .col1 {
-    flex: 2;
+    flex: 1;
 }
 
 .col2 {
-    flex: 2;
+    flex: 1;
 }
 
 .col3 {
-    flex: 2;
+    flex: 1;
 }
 
 .col4 {
-    flex: 2;
+    flex: 1;
 }
 
 #right {
@@ -183,9 +234,19 @@ a:hover {
 }
 
 .fline {
-    height: 50px;
+    display: flex;
+    /*height: 50px;*/
     background-color: black;
     color: chartreuse;
+    align-items: center;
+}
+
+.fline-left {
+    flex: 2;
+}
+
+.fline-right {
+    flex: 1;
 }
 
 .footer-text {
@@ -195,13 +256,36 @@ a:hover {
 
 .footer-images {
     float: right;
-    margin-top: 8px;
-    margin-right: 20px;
+    margin-right: 50px;
     font-size: 25px;
 }
 
+.footer-images a {
+    color: chartreuse;
+}
+
+.footer-images a:hover {
+    color: red;
+}
+
 @media screen and (max-width: 500px) {
-    .container7 {
+    .header {
         flex-direction: column;
+    }
+
+    .header-images {
+        margin-right: 0px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .fline {
+        flex-direction: column;
+    }
+
+    .footer-text {
+        margin-left: 0;
     }
 }
